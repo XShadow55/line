@@ -1,17 +1,32 @@
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        zd1();
+        zd2();
+        zd3();
+    }
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    public static void zd1() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("ФИО сотрудника — ");
+        String lastName = scanner.next();
+        String firstName = scanner.next();
+        String middleName = scanner.next();
+        String fullName = lastName + " " + firstName + " " + middleName;
+    }
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    public static void zd2() {
+        String fullName = "Ivanov Ivan Ivanovich";
+        fullName = fullName.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName);
+    }
+
+    public static void zd3() {
+        String fullName = "Иванов Семён Семёнович";
+        fullName = fullName.replace("ё", "е");
+        System.out.println("Данные ФИО сотрудника  — " + fullName);
     }
 }
